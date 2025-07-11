@@ -7,8 +7,8 @@ ps = PorterStemmer()
 
 
 #downloading the important libraries ! 
-nltk.download('punkt')
-nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('stopwords')
 
 
 
