@@ -1,4 +1,5 @@
 from text_changer import text_transformer
+
 import sys 
 import pickle 
 import string 
@@ -71,7 +72,7 @@ elif predict_data[0] == 14 :
     print ("music")
 
 elif predict_data[0] == 15 :
-    print ("adult")
+    print ("Musical")
 
 elif predict_data[0] == 16 :
     print ("mystery")
@@ -106,9 +107,6 @@ elif predict_data[0] == 24 :
 
 elif predict_data[0] == 25 :
     print ("war")
-
-elif predict_data[0] == 26 :
-    print ("fantasy")
 
 else :
     print ("western")
