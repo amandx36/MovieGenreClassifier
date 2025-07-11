@@ -3,6 +3,23 @@ import streamlit as st
 import pickle
 
 
+import nltk
+
+
+# this will find if not present than it will download the dependies 
+
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
+
+
 # now load the vectorizer model !!!! 
 
 vectorizer = pickle.load(open('vectorization.pkl' , 'rb'))
@@ -92,9 +109,9 @@ if st.button('🛎️Predict IT') :
         # now the value is stored into the result so that we can guess into the following category !! 
         predicted_value = mapping.get(result[0],"Describe more ")
 
-
+        st.success(f"🎥 Predicted Genre is : {predicted_value}")
         # using the spilt function of streamlit for displaying !!! 
 
-        st.success(f"🎥 Predicted Genre is : {predicted_value}")
+        
 
         
