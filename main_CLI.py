@@ -5,7 +5,7 @@ import pickle
 import string 
 import nltk 
 from nltk.stem.porter import PorterStemmer
-ps = PorterStemmer
+ps = PorterStemmer()
 
 
 vectorizer = pickle.load(open('vectorization.pkl','rb'))
