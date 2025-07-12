@@ -19,6 +19,7 @@ ps = PorterStemmer()
 
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('punkt_tab')
 
 
 
@@ -87,5 +88,13 @@ def text_transformer(text):
 
     return " ".join(text)
     # o/p will be :==   aman deep love orang
+
+
+
+
+
+import nltk
+print("NLTK version:", nltk.__version__)
+
 
 
